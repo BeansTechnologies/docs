@@ -1,4 +1,5 @@
 import {useRouter} from "next/router";
+import {useConfig} from "nextra-theme-docs";
 
 export default {
     logo: <span>Beans</span>,
@@ -16,11 +17,6 @@ export default {
     head: function useHead() {
         const { title } = useConfig()
         const { route } = useRouter()
-        const socialCard =
-            route === '/' || !title
-                ? 'https://nextra.site/og.jpeg'
-                : `https://nextra.site/api/og?title=${title}`
-
         return (
             <>
                 <meta name="msapplication-TileColor" content="#fff" />
@@ -36,12 +32,10 @@ export default {
                     content="High-quality open-source software solution for web developers."
                 />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:image" content={socialCard} />
                 <meta
                     name="og:title"
                     content={title ? title + ' – Beans' : 'Beans'}
                 />
-                <meta name="og:image" content={socialCard} />
                 <meta name="apple-mobile-web-app-title" content="Beans" />
                 <link rel="icon" href="/icon.svg" type="image/svg+xml" />
             </>
