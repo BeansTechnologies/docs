@@ -6,6 +6,7 @@ export default {
     project: {
         link: "https://github.com/BeansTechnologies"
     },
+    docsRepositoryBase: "https://github.com/BeansTechnologies/docs/blob/main/docs",
     useNextSeoProps() {
         const { asPath } = useRouter()
         if (asPath !== '/') {
