@@ -1,0 +1,40 @@
+---
+title: Validators
+---
+
+import { Card, Cards, Tab, Tabs } from 'nextra-theme-docs'
+
+# Validators
+
+Validators
+
+#### Email
+
+```js
+isValidEmail('john@example.com'); //true
+isValidEmail('invalidemail@'); //false
+```
+
+#### IP Address
+
+```js
+isValidIPAddress('192.168.0.1'); //true
+isValidIPAddress('256.0.0.1'); //false
+```
+
+#### Phone Number
+
+```js
+isValidPhoneNumber('+48 123 456 789'); //true
+isValidPhoneNumber('123-456-789'); //true
+isValidPhoneNumber('123456789'); //true
+isValidPhoneNumber('0048 123-456-789'); //true
+isValidPhoneNumber('+1 123-456-789'); //false
+```
+
+#### Extract URLs
+
+```js
+const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Visit my website at https://www.example.com for more information. You can also check out our blog at http://blog.example.com.';
+extractURLs(text); //['https://www.example.com', 'http://blog.example.com']
+```

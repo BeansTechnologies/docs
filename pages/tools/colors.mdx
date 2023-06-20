@@ -1,0 +1,81 @@
+---
+title: Colors
+---
+
+import { Card, Cards, Tab, Tabs } from 'nextra-theme-docs'
+
+# Colors
+
+Convert your colors and generate random ones.
+
+#### HEX to RGB
+```js
+const rgbColorFromHex = hexToRgb("#ff0000");
+console.log(rgbColorFromHex);
+```
+
+#### HEX to HSL
+```js
+const hslFromHexColor = hexToHsl("#ff0000");
+console.log(hslFromHexColor);
+```
+
+#### RGB to CMYK
+```js
+const rgbColor = rgbToCmyk(255, 0, 127);
+console.log(rgbColor);
+```
+
+#### RGB to HEX
+```js
+const hexColor = rgbToHex(0, 128, 255);
+console.log(hexColor);
+```
+
+#### RGB to RGBA
+```js
+const rgbaColor = rgbToRgba(255, 0, 0, 0.5);
+console.log(rgbaColor);
+```
+
+#### RGBA to RGB
+```js
+const rgbColorFromRgba = rgbaToRgb(255, 0, 0, 0.5);
+console.log(rgbColorFromRgba);
+```
+
+#### RGB to HSL
+```js
+const hslColor = rgbToHsl(255, 255, 0);
+console.log(hslColor);
+```
+
+#### CMYK to HEX
+```js
+const hexFromCmykColor = cmykToHex(0.2, 0.4, 0.6, 0.8)
+console.log(hexFromCmykColor);
+```
+
+#### Cmyk to RGB
+```js
+const cmykColor = cmykToRgb(0.2, 0.4, 0.6, 0.8);
+console.log(cmykColor);
+```
+
+#### HSL to HEX
+```js
+const hexFromHslColor = hslToHex(0.5, 1, 0.4);
+console.log(hexFromHslColor)
+```
+
+#### HSL to CMYK
+```js
+const cmykFromHslColor = hslToCmyk(0.5, 1, 0.4);
+console.log(cmykFromHslColor);
+```
+
+#### HSL to RGB
+```js
+const rgbColorFromHsl = hslToRgb(0.5, 1, 0.4);
+console.log(rgbColorFromHsl);
+```

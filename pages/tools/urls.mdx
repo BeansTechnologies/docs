@@ -1,0 +1,47 @@
+---
+title: Urls
+---
+
+import { Card, Cards, Tab, Tabs } from 'nextra-theme-docs'
+
+# Urls
+
+Utility functions for urls.
+
+#### Convert string to slug
+
+```js
+stringToSlug("hello world. how are you! what is your name?") // hello-world-how-are-you-what-is-your-name
+```
+
+#### Get url query params
+```js
+const url = "https://example.com/path?param1=value1&param2=value2&param2=value3&param3=value4&arrayParam[]=value1&arrayParam[]=value2";
+
+const queryParams = getUrlQueryParams(url);
+// {
+//   param1: 'value1',
+//   param2: [ 'value2', 'value3' ],
+//   param3: 'value4',
+//   arrayParam: [ 'value2' ]
+// }
+```
+
+#### Build url
+```js
+const protocol = "https";
+const host = "example.com";
+const path = "/path";
+const queryParams = { param1: "value1", param2: ["value2", "value3"] };
+
+const url = buildUrl(protocol, host, path, queryParams); // https://example.com/path?param1=value1&param2=value2&param2=value3
+```
+
+#### Remove and set url search params
+```js
+const url = 'http://www.example.com/search?query=example&page=1';
+
+const newUrl = setURLParameter(url, 'testing', '2'); // http://www.example.com/search?query=example&page=1&testing=2
+
+const newerUrl = removeURLParameter(newUrl, 'page'); // http://www.example.com/search?query=example&testing=2
+```

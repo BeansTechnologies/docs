@@ -1,0 +1,41 @@
+---
+title: Numeric systems
+---
+
+import { Card, Cards, Tab, Tabs } from 'nextra-theme-docs'
+
+# Numeric systems
+
+Functions to convert numbers to different numeric systems.
+
+#### Binary to others
+```js
+const binaryNumber = "101010";
+const octalNumber = binaryToOctal(binaryNumber); // 52
+const decimalNumber = binaryToDecimal(binaryNumber); // 42
+const hexNumber = binaryToHex(binaryNumber); // 2A
+```
+
+#### Octal to others
+```js
+const octalNumber = "52";
+const binaryNumber = octalToBinary(octalNumber); // 101010
+const decimalNumber = octalToDecimal(octalNumber); // 42
+const hexNumber = octalToHex(octalNumber); // 2A
+```
+
+#### Decimal to others
+```js
+const decimalNumber = 42;
+const binaryNumber = decimalToBinary(decimalNumber); // 101010
+const octalNumber = decimalToOctal(decimalNumber); // 52
+const hexNumber = decimalToHex(decimalNumber); // 2A
+```
+
+#### Hex to others
+```js
+const hexNumber = "2A";
+const binaryNumber = hexToBinary(hexNumber); // 101010
+const octalNumber = hexToOctal(hexNumber); // 52
+const decimalNumber = hexToDecimal(hexNumber); // 42
+```

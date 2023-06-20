@@ -1,0 +1,42 @@
+---
+title: Text
+---
+
+import { Card, Cards, Tab, Tabs } from 'nextra-theme-docs'
+
+# Text
+
+Utility functions for text and cases.
+
+### Cases
+
+```js
+sentenceCase("hello world. how are you! what is your name?") // Hello world. How are you! What is your name?
+titleCase("hello world. how are you! what is your name?") // Hello World. How Are You! What Is Your Name?
+mixedCase("hello world. how are you! what is your name?") // HeLlO WoRlD. hOw aRe yOu! WhAt iS YoUr nAmE?
+inverseCase("hello world. how are you! what is your name?") // hElLo wOrLd. HoW ArE YoU! wHaT Is yOuR NaMe?
+camelCase("hello world. how are you! what is your name?") // helloWorldHowAreYouWhatIsYourName
+```
+
+### Text
+
+#### Lorem Ipsum generator
+```js
+loremIpsum(10, 3) // 10 paragraphs with 3 sentences each
+```
+
+#### Is palindrom
+```js
+isPalindrome('Madam'); // true
+isPalindrome('Hello'); // false
+```
+
+#### Count words
+```js
+counter("hello world. how are you! what is your name?") // { characters: 44, words: 9, sentences: 3 }
+```
+
+#### Truncate text
+```js
+truncateText("hello world. how are you! what is your name?", 10) // hello worl...
+```

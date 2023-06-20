@@ -1,0 +1,61 @@
+---
+title: Dates
+---
+
+import { Card, Cards, Tab, Tabs } from 'nextra-theme-docs'
+
+# Dates
+
+Utility function for dates.
+
+#### Get current time in HH:MM:ss format
+```js
+const currentTime = getCurrentTime();  // 11:30:45
+```
+
+#### Get current time in specified format
+```js
+const time = new Date();
+const formattedTime = formatTime(time, 'HH:mm'); // 09:20
+```
+
+#### Convert time to 24-hour format
+```js
+const convertedTime = convertTo24HourFormat('02:30 PM') //14:30
+```
+
+#### Check if time is valid
+```js
+isValidTime('12:30:45'); // true
+isValidTime('25:00:00'); // false
+isValidTime('12:60:00'); // false
+isValidTime('12:30:60'); // false
+```
+
+#### Check if year is leap year
+```js
+const isLeap = isLeapYear(2023); // false
+```
+
+#### Check if date is future date
+```js
+const futureDate = isFutureDate(new Date('2024-01-01')) //true
+```
+
+#### Calculate age from birthdate
+```js
+const birthDate = new Date(1999, 7, 9);
+const age = calculateAge(birthDate); //23
+```
+
+#### Check if date is weekend
+```js
+const currentDate = new Date("2023-06-24");
+isWeekend(currentDate); // true
+```
+
+#### Convert to 12h format
+```js
+formatTime12h(9, 30); // 9:30 AM
+formatTime12h(18, 45); // 6:45 PM
+```

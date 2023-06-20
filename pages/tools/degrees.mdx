@@ -1,0 +1,55 @@
+---
+title: Degrees
+---
+
+import { Card, Cards, Tab, Tabs } from 'nextra-theme-docs'
+
+# Degrees
+
+Utility function for degrees/temperatures
+
+#### Kelvin to others
+
+```js
+console.log(kelvinToCelsius(300)); //26.85
+console.log(kelvinToFahrenheit(300)); //80.33
+```
+
+#### Celsius to others
+
+```js
+console.log(celsiusToKelvin(-25)); //248.15
+console.log(celsiusToFahrenheit(-25)); //-13
+```
+
+#### Fahrenheit to others
+
+```js
+console.log(fahrenheitToCelsius(77)); //25
+console.log(fahrenheitToKelvin(77)); //298.15
+```
+
+#### Adding ordinal suffix
+
+```js
+console.log(addOrdinalSuffix(1)); //1st
+console.log(addOrdinalSuffix(22)); //22nd
+console.log(addOrdinalSuffix(33)); //33rd
+console.log(addOrdinalSuffix(41)); //41st
+```
+
+#### Get range
+
+```js
+const temperature = 120;
+const temperatureUnit = 'F';
+const temperatureRanges = [
+{ min: -Infinity, max: 0, label: 'Freezing' },
+{ min: 1, max: 10, label: 'Cold' },
+{ min: 11, max: 20, label: 'Moderate' },
+{ min: 21, max: 30, label: 'Warm' },
+{ min: 31, max: Infinity, label: 'Hot' }
+];
+
+console.log(getRange(temperature, temperatureUnit, temperatureRanges)); //Hot
+```
