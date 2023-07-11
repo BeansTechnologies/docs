@@ -7,5 +7,9 @@
     }
   },
   "guides": "Guides",
-  "tools": "Tools"
+  "tools": "Tools",
+  "carbon": {
+    "title": "Carbon",
+    "files": "File conventions"
+  }
 }

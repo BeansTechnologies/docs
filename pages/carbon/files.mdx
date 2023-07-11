@@ -1,0 +1,32 @@
+---
+title: File conventions
+---
+
+### `carbon.json`
+
+- This file is successor to `carbon.package.json`. It contains minecraft version, modloader and dependencies managed by carbon.
+
+```json
+{
+  "dependencies": {
+    "create-water-bucket-mixing-fix": "0.0.1"
+  },
+  "modloader": "forge",
+  "version": "1.19.2"
+}
+```
+
+### `carbon.config.json`
+
+- This file contains configuration for packages. The file should be in the root of the kubejs folder.
+
+```json
+{
+  "name": "package-name",
+  "version": "current version (0.0.1 for default)",
+  "author": "author",
+  "minecraftVersion": "1.19.2" or ["1.19.2", "1.19"],
+  "description": "description",
+  "modloaders": ["forge", "fabric"]
+}
+```
